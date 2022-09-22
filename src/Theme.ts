@@ -8,7 +8,7 @@ export const mainColors = {
 
 export const categoryColors = {
     food: "#fb5607",
-    salary: "#8ac926",
+    salary: "#065535",
     other: "#df2935"
 }
 

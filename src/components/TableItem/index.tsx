@@ -1,6 +1,6 @@
 import { categories } from "../../data/categories";
 import { Item } from "../../types/Item";
-import { TableColumn, TableLine } from "./styles";
+import { Category, TableColumn, TableLine, Value } from "./styles";
 
 type Props = {
     item: Item;
@@ -11,9 +11,16 @@ export const TableItem = ({item}: Props) => {
     return(
         <TableLine>
             <TableColumn>{item.date.toLocaleDateString('pt-BR')}</TableColumn>    
-            <TableColumn>{categories[item.category].title}</TableColumn>    
+            <TableColumn>
+                <Category color={categories[item.category].color}>
+                    {categories[item.category].title} 
+                </Category>   
+            </TableColumn>    
             <TableColumn>{item.title}</TableColumn>    
-            <TableColumn>{`R$ ${value.toLocaleString('pt-BR',{minimumFractionDigits: 2, maximumFractionDigits: 2})}`}
+            <TableColumn>
+                <Value expense={categories[item.category].expense}>
+                    {`R$ ${value.toLocaleString('pt-BR',{minimumFractionDigits: 2, maximumFractionDigits: 2})}`}
+                </Value>
             </TableColumn>    
         </TableLine>
     );
