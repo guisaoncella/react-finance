@@ -1,9 +1,14 @@
-import { Container } from "./App.styles";
+import { Body, Container, Header, HeaderText } from "./App.styles";
 
 const App = () => {
     return(
         <Container>
-            <h1>Hello</h1>
+            <Header>
+                <HeaderText>Sistema Financeiro</HeaderText>
+            </Header>
+            <Body>
+                ...
+            </Body>
         </Container>
     );
 }
