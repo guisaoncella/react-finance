@@ -6,4 +6,10 @@ export const mainColors = {
     red: "#E63946"
 }
 
+export const categoryColors = {
+    food: "#fb5607",
+    salary: "#8ac926",
+    other: "#df2935"
+}
+
 export const font = "Arial, Helvetica, sans-serif"
