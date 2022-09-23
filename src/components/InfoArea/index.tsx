@@ -1,4 +1,5 @@
 import { formatCurrentMonth } from "../../util/dateFilter";
+import { ResumeItem } from "../ResumeItem";
 import { Container, MonthArea, MonthArrow, MonthTitle, ResumeArea } from "./styles";
 
 type Props = {
@@ -24,7 +25,9 @@ export const InfoArea = ({currentMonth, onMonthChange, income, expense}: Props) 
                 <MonthArrow onClick={() => handleChangeMonth(1)}>➡️</MonthArrow>
             </MonthArea>
             <ResumeArea>
-
+                <ResumeItem title="Receitas" value={income} color='green' />
+                <ResumeItem title="Despesas" value={expense} color='red' />
+                <ResumeItem title="Balanço" value={income - expense} color={(income - expense) >= 0 ? 'green' : 'red'} />
             </ResumeArea>
         </Container>
     );
