@@ -1,3 +1,3 @@
 # react-finance
-Sistema de controle de finanças
+Controle de finanças
 <a href="https://guisaoncella-react-finance.vercel.app/">Link vercel</a>
